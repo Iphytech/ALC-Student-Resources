@@ -6,6 +6,9 @@ const methodOverride = require('method-override');
 //setup our express app
 const app = express();
 
+//set port 
+app.set('port', (process.env.PORT || 8081));
+
 //connect to mongodb
 mongoose.connect('mongodb://localhost/studentsInfo');
 mongoose.Promise = global.Promise;
@@ -26,13 +29,8 @@ app.use(function(err, req, res, next){
 //initialize routes
 app.use('/api', require('./routes/api'));
 
-// app.get('/', function(req, res){
-// console.log('get request is working');
-// res.send({ name:'ifunaya'});
-// })
-
 //listen to a requests
 
-app.listen(process.env.port || 7000, function(){
+app.listen(app.get('port'), function(){
 console.log('now listening to a requests');
 })
