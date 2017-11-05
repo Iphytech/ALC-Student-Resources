@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Manage Students</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,500,600,700">
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="app-main__container">
+        <h1 class="app-main__title">Manage Students</h1>
+        <div class="app-main__student-list">
+            <table class="app-main__student-list-table">
+                <thead>
+                    <tr class="app-main-table--row50">
+                        <th class="app-main-table--col8">Name of Student</th>
+                        <th class="app-main-table--col5">State</th>
+                        <th class="app-main-table--col2">Age</th>
+                        <th class="app-main-table--col5">Phone</th>
+                        <th class="app-main-table--col6">Reg Number</th>
+                        <th class="app-main-table--col6">Faculty</th>
+                        <th class="app-main-table--col6">Department</th>
+                        <th class="app-main-table--col2">Level</th>
+                        <th class="app-main-table--col10">Actions</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div class="app-main__new-student-button-container">
+            <button type="button" class="app-main__form-button">New Student</button>
+        </div>
+    </div>
+    <div class="app-main__form-container">
+        <form class="app-main__student-form">
+            <h3 class="app-main__student-form-title">New Student</h3>
+            <div class="app-main__form-control">
+                <label for="student-form-fullname">Fullname</label>
+                <input type="text" placeholder="Fullname" name="name" id="student-form-fullname" autocomplete="false">
+            </div>
+            <div class="app-main__form-control">
+                <label for="student-form-regno">Registration Number</label>
+                <input type="text" placeholder="Registration Number" name="regNo" id="student-form-regno" autocomplete="false">
+            </div>
+            <div class="app-main__form-control">
+                <label for="student-form-state">State</label>
+                <input type="text" placeholder="State" name="state" id="student-form-state" autocomplete="false">
+            </div>
+            <div class="app-main__form-control">
+                <label for="student-form-phone">Phone Number</label>
+                <input type="text" placeholder="Phone Number" name="phoneNumber" id="student-form-phone" autocomplete="false">
+            </div>
+            <div class="app-main__form-control">
+                <label for="student-form-age">Age</label>
+                <input type="text" placeholder="Age" name="age" id="student-form-age" autocomplete="false">
+            </div>
+            <div class="app-main__form-control">
+                <label for="student-form-faculty">Faculty</label>
+                <input type="text" placeholder="Faculty" name="faculty" id="student-form-faculty" autocomplete="false">
+            </div>
+            <div class="app-main__form-control">
+                <label for="student-form-dept">Department</label>
+                <input type="text" placeholder="Department" name="dept" id="student-form-dept" autocomplete="false">
+            </div>
+            <div class="app-main__form-control">
+                <label for="student-form-level">Level</label>
+                <input type="text" placeholder="Level" name="level" id="student-form-level" autocomplete="false">
+            </div>
+            <div class="app-main__form-button-container">
+                <button type="button" class="app-main__form-button">Create Student</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/table_script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,209 @@
+body {
+    font-family: 'Roboto', system-ui, sans-serif;
+    color: #3b4840;
+    background: #fff;
+    margin: 0;
+}
+
+.app-main__form-container {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    overflow-y: auto;
+    background: rgba(250, 252, 252, 0.995);
+}
+
+.app-main__student-form {
+    max-width: 360px;
+    margin: 100px auto 160px;
+}
+
+.app-main__title,
+.app-main__student-form-title {
+    color: #536572;
+    font: 300 2.4em 'Roboto', system-ui, sans-serif;
+    text-align: center;
+    position: relative;
+    top: -30px;
+}
+
+.app-main__title {
+    top: 30px;
+    text-align: left;
+    margin-bottom: 10px;
+    margin-left: 50px;
+}
+
+.app-main__form-control {
+    margin: 10px auto 30px;
+    padding: 0 30px;
+}
+
+.app-main__form-control>label {
+    font-size: 0.7em;
+    font-weight: 500;
+    color: #536572;
+    display: block;
+    margin-bottom: 7px;
+}
+
+.app-main__form-control>input[type=text] {
+    display: block;
+    width: 300px;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.app-main__form-control>input[type=text]::placeholder {
+    color: rgba(0, 0, 0, 0.25);
+}
+
+.app-main__student-form .app-main__form-button-container {
+    position: fixed;
+    border-top: 1px solid #ddd;
+    background: #fff;
+    z-index: 1;
+    height: 80px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    line-height: 80px;
+}
+
+.app-main__form-button {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    padding: 10px 15px;
+    border-radius: 3px;
+    background: #3685c8;
+    color: #fff;
+    font: 500 0.8em 'Roboto';
+    letter-spacing: 1px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all .4s ease-out;
+}
+
+.app-main__form-button-container .app-main__form-button:before,
+.app-main__new-student-button-container .app-main__form-button:before {
+    content: '';
+    border: 2px solid #3685c8;
+    border-radius: 5px;
+    padding: 1px;
+    background: transparent;
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    width: 100%;
+    height: 100%;
+    transition: all .4s ease-out;
+}
+
+.app-main__form-button:hover {
+    background: #0067b1;
+}
+
+.app-main__form-button-container .app-main__form-button:hover:before,
+.app-main__new-student-button-container .app-main__form-button:hover:before {
+    border-color: #0067b1;
+}
+
+.app-main__student-list {
+    margin-top: 80px;
+    position: relative;
+    max-height: 400px;
+    overflow: auto;
+    border-top: 2px solid #727d85;
+    border-bottom: 2px solid #727d85;
+}
+
+.app-main__student-list-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    text-align: center;
+}
+
+.app-main__student-list-table tr>th {
+    border-bottom: 2px solid #727d85;
+    text-transform: uppercase;
+    font: 700 0.7em 'Roboto', system-ui, sans-serif;
+    padding: 15px 0;
+    color: #536572;
+}
+
+.app-main__student-list-table>tbody>tr>td {
+    font-size: 0.7em;
+    padding: 10px 5px;
+    color: #536572;
+    text-transform: uppercase;
+}
+
+.app-main__student-list-table>tbody>tr:nth-child(2n+2) {
+    background: rgba(245, 245, 245, 0.995);
+}
+
+.app-main__student-list-table tr>:first-child {
+    text-align: left;
+    padding-left: 25px;
+}
+
+.app-main__student-list-table>tbody>tr:not(:last-child)>td {
+    border-bottom: 1px solid #ddd;
+}
+
+.app-main__student-list-table tr.app-main-table--row50>.app-main-table--col2 {
+    width: 4%;
+}
+
+.app-main__student-list-table tr.app-main-table--row50>.app-main-table--col5 {
+    width: 10%;
+}
+
+.app-main__student-list-table tr.app-main-table--row50>.app-main-table--col6 {
+    width: 12%;
+}
+
+.app-main__student-list-table tr.app-main-table--row50>.app-main-table--col8 {
+    width: 16%;
+}
+
+.app-main__student-list-table tr.app-main-table--row50>.app-main-table--col10 {
+    width: 20%;
+}
+
+.edit-btn,
+.delete-btn {
+    margin-left: 10px;
+    padding: 7px 10px;
+}
+
+.delete-btn {
+    background: #8b343a;
+}
+
+.delete-btn:hover {
+    background: #86111c;
+}
+
+.app-main__new-student-button-container {
+    position: fixed;
+    border-top: 1px solid #ddd;
+    background: #fff;
+    z-index: 1;
+    height: 80px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    line-height: 80px;
+}
