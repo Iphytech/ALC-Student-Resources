@@ -25,7 +25,7 @@ jQuery(function($) {
 			formContainer.show(500);
 
 			formButton.on('click', function createNewStudent(evt) {
-
+				
 				$.ajax({
 					method: 'POST',
 					url: '/api/studentsResources',
