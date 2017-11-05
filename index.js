@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const mongoose = require('mongoose');
+// const mongoose = require('mongoose');
 const methodOverride = require('method-override');
 
 //setup our express app
@@ -10,7 +10,16 @@ const app = express();
 app.set('port', (process.env.PORT || 8081));
 
 //connect to mongodb
-mongoose.connect('mongodb://localhost/studentsInfo');
+ var mongoose = function() {
+mongoose.connect('mongodb://iphytech:nillysmooth?@ds121495.mlab.com:21495/testapp');
+var db = mongoose.connection;
+db.on("error", console.error.bind(console, "connection error"));
+db.once("open", function(callback){
+console.log("connection succeeded");
+});
+return db;	
+}
+
 mongoose.Promise = global.Promise;
 
 app.use(express.static('public'));
