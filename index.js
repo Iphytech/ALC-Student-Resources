@@ -11,6 +11,7 @@ app.set('port', (process.env.PORT || 8081));
 
 //connect to mongodb
  var mongoose = function() {
+mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://iphytech:nillysmooth?@ds121495.mlab.com:21495/testapp');
 var db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error"));
@@ -19,8 +20,6 @@ console.log("connection succeeded");
 });
 return db;	
 }
-
-mongoose.Promise = global.Promise;
 
 app.use(express.static('public'));
 
