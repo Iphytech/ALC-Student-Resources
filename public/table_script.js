@@ -81,6 +81,8 @@ jQuery(function($) {
 				var $buttonText = formButton.text();
 				var $isDirty = [];
 				var $$editBtn = $(this);
+				var $$tds = $$editBtn.parentsUntil('tr', 'td').siblings();
+				var $$cols = columns.map(function(column) { return column[0]; });
 
 				formTitle.text('Edit Student Data') && formButton.text('Back to List') && formContainer.show(500);
 
@@ -95,6 +97,14 @@ jQuery(function($) {
 								'X-HTTP-Method-Override': 'PUT'
 							},
 							success: function(data) {
+								$.each(data, function(key, val) {
+									var index = $$cols.indexOf(key);
+									if (! (val == item[key] || index === -1)) {
+										item[key] = val;
+										$($$tds.get(index)).text(val);
+									}
+								});
+
 								hideFormContainer();
 							},
 							error: function() {
