@@ -13,7 +13,7 @@ app.set('port', (process.env.PORT || 8081));
 const mongoose = (function() {
  const mongoose = require('mongoose');
  mongoose.Promise = global.Promise;
- mongoose.connect('mongodb://iphytech:nillysmooth?@ds121495.mlab.com:21495/testapp');
+ mongoose.connect('mongodb://iphytech:alc-connect@ds121495.mlab.com:21495/testapp');
  
  var db = mongoose.connection;
  db.on("error", console.error.bind(console, "connection error"));
